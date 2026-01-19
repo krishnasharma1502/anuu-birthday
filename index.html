@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Anuu ❤️</title>
+
+<style>
+body {
+  margin:0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(120deg,#ffdde1,#ee9ca7);
+  text-align:center;
+  color:#333;
+}
+
+section {
+  padding:70px 20px;
+}
+
+h1,h2 { color:#ff2f63; }
+
+p {
+  font-size:18px;
+  max-width:750px;
+  margin:auto;
+  line-height:1.9;
+}
+
+.photos {
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:15px;
+  margin-top:30px;
+}
+
+.photos img {
+  width:220px;
+  height:260px;
+  object-fit:cover;
+  border-radius:18px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.25);
+}
+
+.letter {
+  background:white;
+  padding:40px;
+  border-radius:25px;
+  box-shadow:0 15px 30px rgba(0,0,0,0.25);
+}
+
+button {
+  background:#ff2f63;
+  color:white;
+  border:none;
+  padding:12px 30px;
+  border-radius:30px;
+  font-size:16px;
+}
+</style>
+</head>
+
+<body>
+
+<section>
+<h1>Happy Birthday Anuu 🎂❤️</h1>
+<p>I wish I could be there with you today... so I made this just for you.</p>
+</section>
+
+<section>
+<h2>Our Story 🕰️</h2>
+<p>We’ve known each other for 5 years, and for 2 beautiful years, I’ve proudly called you mine.</p>
+</section>
+
+<section>
+<h2>Our Memories 📸</h2>
+<div class="photos">
+<img src="anuu1.jpg">
+<img src="anuu2.jpg">
+<img src="anuu3.jpg">
+</div>
+</section>
+
+<section>
+<div class="letter">
+<h2>A Letter For You 💌</h2>
+<p>
+My Anuu,<br><br>
+Loving you feels like home.
+You are my calm, my happiness, and my forever.
+Happy Birthday, my love.
+</p>
+</div>
+</section>
+
+<section>
+<p>Before you leave… one last thing 🤍</p>
+<button onclick="show()">Open this 💖</button>
+
+<div id="surprise" style="display:none; margin-top:40px;">
+<h2>⏳ Until I See You</h2>
+<p id="countdown"></p>
+<p id="msg"></p>
+</div>
+</section>
+
+<script>
+function show(){
+document.getElementById("surprise").style.display="block";
+countdown();
+type();
+}
+
+function countdown(){
+const meet=new Date("March 1, 2026").getTime();
+setInterval(()=>{
+const now=new Date().getTime();
+const d=meet-now;
+document.getElementById("countdown").innerHTML=
+Math.floor(d/(1000*60*60*24))+" days left ❤️";
+},1000);
+}
+
+const text=`Anuu...
+
+Every second that passes
+is one second closer to holding you.
+
+March 1st is not just a date.
+It's our moment.
+
+Always yours,
+Krishna ❤️`;
+
+let i=0;
+function type(){
+if(i<text.length){
+document.getElementById("msg").innerHTML+=text.charAt(i);
+i++;
+setTimeout(type,50);
+}
+}
+</script>
+
+</body>
+</html>
+
